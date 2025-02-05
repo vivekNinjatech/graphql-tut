@@ -1,4 +1,4 @@
-export const typeDefs = `#graphql
+export const typeDefs: any = `#graphql
   type Game {
     id: ID!
     title: String!
@@ -17,6 +17,7 @@ export const typeDefs = `#graphql
   type Query {
     games: [Game]
     reviews: [Review]
-    authors: [Author]
+    review(id: ID!): Review
+    authors: [Author] 
   }
 `;

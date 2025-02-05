@@ -1,8 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import {typeDefs} from "./schema.js";
-import db from "./db.js";
-// server setup
+import { typeDefs } from "./schema";
+import db from "./db";
+
 const resolvers = {
   Query: {
     games() {
@@ -22,8 +22,12 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
-});
+const port = 4000;
+const run = async () => {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port },
+  });
+  console.log(`Server is sprinting on :${port} url is : ${url}`);
+};
 
-console.log("server is ready", url);
+run();

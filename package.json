@@ -5,25 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.ts",
     "format": "npx prettier . --write"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vivekNinjatech/graphql-tut.git"
+    "url": "git@github.com-ninjatech:vivekNinjatech/graphql-tut.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vivekNinjatech/graphql-tut/issues"
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
   },
-  "homepage": "https://github.com/vivekNinjatech/graphql-tut#readme",
-  "type": "module",
   "dependencies": {
     "@apollo/server": "^4.11.3",
-    "graphql": "^16.10.0"
-  },
-  "devDependencies": {
-    "prettier": "3.4.2"
+    "prettier": "^3.4.2"
   }
 }
