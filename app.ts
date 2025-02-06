@@ -56,15 +56,15 @@ const resolvers = {
       return game;
     },
     updateGame(_: any, args: any) {
-      let updatedGames = null
-      db.games.map((game)=>{
-        if(game.id === args.id){
-          updatedGames = {...game, ...args.game}
-          return updatedGames
+      let updatedGames = null;
+      db.games.map((game) => {
+        if (game.id === args.id) {
+          updatedGames = { ...game, ...args.game };
+          return updatedGames;
         }
-        return game
-      })
-      return updatedGames
+        return game;
+      });
+      return updatedGames;
     },
   },
 };
